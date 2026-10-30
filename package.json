@@ -2,7 +2,7 @@
   "name": "mini-1",
   "private": true,
   "scripts": {
-    "build": "tailwindcss -i src/input.css -o assets/css/style.css --minify",
+    "build": "node init && tailwindcss -i src/input.css -o assets/css/style.css --minify",
     "watch": "tailwindcss -i src/input.css -o assets/css/style.css --watch"
   },
   "devDependencies": {
