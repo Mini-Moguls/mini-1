@@ -62,7 +62,7 @@
     'Supportive, family-friendly market environment in Harare, Zimbabwe'
   ];
   var EXCLUDED = [
-    'Specific Harare venue address (To be announced by the organisers)',
+    'Confirmed Venue: National Botanic Gardens, Harare, Zimbabwe',
     'Whether stalls, tables or display equipment are provided vs brought by participants (To be confirmed)',
     'Participant registration fee, if any, and registration deadline (To be confirmed)',
     'Public entrance fee of US$5 per person is subject to final confirmation; payment methods TBA'
@@ -1082,7 +1082,7 @@
           '<rect x="310" y="135" width="580" height="72" rx="36" fill="#F4C84A" stroke="#111111" stroke-width="5"/>' +
           '<text x="600" y="180" text-anchor="middle" font-family="Caprasimo, Georgia, serif" font-size="32" fill="#111111">12 DEC 2026 · HARARE</text>' +
           '<rect x="390" y="220" width="420" height="42" rx="21" fill="#FFFFFF" stroke="#111111" stroke-width="4"/>' +
-          '<text x="600" y="247" text-anchor="middle" font-family="Outfit, sans-serif" font-size="16" font-weight="800" letter-spacing="2.5" fill="#111111">10:00 AM – 4:00 PM · VENUE TBA</text>' +
+          '<text x="600" y="247" text-anchor="middle" font-family="Outfit, sans-serif" font-size="16" font-weight="800" letter-spacing="2.5" fill="#111111">10:00 AM – 4:00 PM · BOTANIC GARDENS</text>' +
           // Young Moguls welcoming visitors inside the Pavilion
           mogulKid(445, 455, { skin: '#7A4821', shirt: '#F4C84A', apron: '#FFFFFF', hair: 'puffs', armL: 'wave', armR: 'up' }) +
           mogulKid(755, 455, { skin: '#8D5524', shirt: '#FFFFFF', apron: '#F4C84A', hair: 'cap', armL: 'up', armR: 'wave' }) +
@@ -1245,7 +1245,7 @@
     return 'Sat, 12 Dec 2026 · 10:00 AM–4:00 PM';
   }
   function availability() {
-    return { text: 'Harare · Venue TBA', cls: 'badge-ok' };
+    return { text: 'National Botanic Gardens, Harare', cls: 'badge-ok' };
   }
   // The live price for an enquiry. room: 'share' or 'own'.
   function quote(tour, dep, travellers, room) {
@@ -1621,7 +1621,7 @@
       $('[data-q="supp"]', widget).textContent = money(q.supplement);
       $('[data-q="total"]', widget).textContent = money(q.total);
       $('[data-q="deposit"]', widget).textContent = 'TBA';
-      $('[data-q="note"]', widget).textContent = 'Saturday, 12 December 2026 · 10:00 AM–4:00 PM · Harare (Venue TBA).';
+      $('[data-q="note"]', widget).textContent = 'Saturday, 12 December 2026 · 10:00 AM–4:00 PM · National Botanic Gardens, Harare.';
       $$('[data-dep]', tbody).forEach(function (r) { r.classList.toggle('is-selected', r.getAttribute('data-dep') === dep.start); });
       var sum = $('[data-enquiry-summary]');
       if (sum) sum.textContent = tour.name + ' · ' + departureLabel(dep) + ' · ' + plural(q.travellers, 'participant', 'participants') + (room === 'own' ? ', creator table enquiry' : ', public admission (US$5 pp, subject to confirmation)');
