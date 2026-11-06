@@ -1739,6 +1739,17 @@
   //   fetch('https://formspree.io/f/your-id', { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
   //     .then(function (res) { if (res.ok) showSuccess(form); else toast('Something went wrong. Please email us.'); });
   function onValid(form) {
+    var topicEl = form.elements.topic;
+    var isPartner = topicEl && /partner|sponsor/i.test(topicEl.value);
+    var targetEmail = isPartner ? 'partners@minimoguls.online' : 'info@minimoguls.online';
+    var fd = new FormData(form);
+    fd.append('_subject', 'Mini Moguls Market Day Website Submission (' + targetEmail + ')');
+    fd.append('_captcha', 'false');
+    fetch('https://formsubmit.co/ajax/' + targetEmail, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: fd
+    }).catch(function () {});
     showSuccess(form);
   }
   // A short reference for the confirmation, like SJ-7K2Q (no 0/O or 1/I to misread).
